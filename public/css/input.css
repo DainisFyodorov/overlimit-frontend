@@ -1,0 +1,86 @@
+
+.input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 535px;
+    height: 185px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 30px rgba(0,0,0,0.4);
+}
+
+.input:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff007a), color-stop(#4020ef), to(#00d0ff));
+  background: -o-linear-gradient(left, #ff007a, #4020ef, #00d0ff);
+  background: linear-gradient(to right, #ff007a, #4020ef, #00d0ff); }
+
+
+
+.input div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+}
+
+.input p{
+    display: block;
+    width: 450px;
+    height: auto;
+    margin: 0px 0px 25px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.input input{
+    padding-left: 5px;
+    height: 42px;
+    width: 295px;
+    border-radius: 3px;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 1;
+    background: rgba(255,255,255,0.087);
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 0 9px;
+}
+.input input::placeholder{
+    color: #fff;
+    opacity: 0.3;
+}
+.input button{
+    height: 43px;
+    width: 137px;
+    border-radius: 200px;
+    border-style: solid;
+    border-color: #fff;
+    margin-left: 10px;
+    color: #fff;
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .2s;
+}
+.input button:hover{
+    background: #fff;
+    color: #000;
+}

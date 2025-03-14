@@ -1,0 +1,201 @@
+﻿.fmenu {
+    position: absolute;
+    width: 750px;
+    height: 550px;
+    right: 0;
+    top: 20%;
+    font-family: "Montserrat", sans-serif;
+}
+
+    .fmenu .right {
+        float: right;
+        width: 380px;
+        height: 550px;
+        background: rgba(0,0,0,0.8);
+        text-align: center;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.35);
+        border-radius: 7px;
+        overflow: hidden;
+    }
+
+
+
+
+    .fmenu .left {
+        float: left;
+        width: 347px;
+        height: 550px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.35);
+    }
+
+    .fmenu h1 {
+      position: relative;
+          background: linear-gradient(45deg, #ff007a, #4020ef);
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 18px 0;
+        font-weight: 600;
+        z-index: 1;
+        margin: 0 0 30px;
+    }
+
+    .fmenu h1:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 105%;
+      background: linear-gradient(45deg, #ff007a, #4020ef);
+      z-index: -1;
+      filter: blur(24px);
+      opacity: 0.7;
+    }
+
+    .fmenu .btns {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .fmenu .btn {
+      padding: 13px 0 13px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+        .fmenu .btn.active {
+            background: #fff;
+            color: #000;
+        }
+
+    .fmenu table {
+        width: 100%;
+        padding: 15px 7px;
+        font-size: 11pt;
+        overflow-x: hidden;
+        overflow-y:scroll;
+        color: #fff;
+    }
+    .fmenu table::-webkit-scrollbar {
+        width: 4px;
+    }
+    .fmenu table::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .fmenu table::-webkit-scrollbar-thumb {
+        background: #fff;
+        border-radius: 200px;
+    }
+
+        .fmenu  th {
+            font-weight: 500;
+            color: #fff;
+        }
+        .fmenu  tr {
+            font-weight: normal;
+            color: #fff;
+            padding: 6px 0;
+        }
+        .fmenu  td {
+            font-weight: normal;
+            color: #fff;
+            padding: 6px 0;
+        }
+
+    .fmenu .info {
+      padding: 15px 20px;;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .fmenu .info p {
+        display: inline-block;
+        font-weight: 500;
+    }
+    .fmenu .info p span {
+        color: #fff;
+        margin-left: 7px;
+    }
+
+    .fmenu .online {
+        color: #00f911;
+        text-shadow: 0 1px 17px rgba(0, 249, 17,0.35);
+    }
+
+    .fmenu .offline {
+        color: #ec0000;
+        text-shadow: 0 1px 17px rgba(236, 0, 0,0.35);
+    }
+    .fmenu .all {
+        color: #fff;
+        text-shadow: 0 1px 17px rgba(255,255,255,0.35);
+    }
+
+    .fmenu .info span {
+        color: #fff
+    }
+
+    .fmenu .btn-submit {
+      font-family: 'Montserrat',sans-serif;
+      margin: 30px auto 0;
+      display: block;
+      font-weight: 500;
+      padding: 11px 0;
+      border: 2px solid #fff;
+      border-radius: 200px;
+      color: #fff;
+      width: 157px;
+      font-size: 15px;
+      transition: .2s;
+    }
+
+    .fmenu .btn-submit:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .fmenu input {
+        font-family: 'Montserrat',sans-serif;
+        font-size: 18px;
+        width: 250px;
+        margin: 15px auto 0;
+        font-weight: 400;
+        padding: 10px 11px;
+        border: 0;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border-radius: 5px;
+        text-overflow: ellipsis;
+    }
+
+    .fmenu input::placeholder {
+        color: #fff;
+        opacity: .55;
+    }
+    .fmenu input:first-child {
+        margin: 10px 0 0;
+    }
+
+
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #fff;
+        border-radius: 200px;
+    }

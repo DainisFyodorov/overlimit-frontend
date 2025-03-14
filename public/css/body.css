@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body{
+    position: absolute;
+    width: 390px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(0,0,0,0.85);
+    border-radius: 10px;
+    background-image: none !important;
+    font-family: 'Montserrat',sans-serif;
+    padding: 40px 0 20px;
+    box-sizing: content-box;
+    overflow: hidden;
+    box-shadow: 2px 3px 32px rgba(0,0,0,0.4);
+}
+
+
+.body__button {
+  margin: 25px auto 5px;
+  display: block;
+  font-family: 'Montserrat',sans-serif;
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-weight: 500;
+  border-radius: 200px;
+  color: #fff;
+  font-size: 16px;
+  transition: .2s;
+}
+
+.body__button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.body:after, .body:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 800%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff0056), color-stop(10%, #7905ff), color-stop(20%, #0562ff), color-stop(30%, #d20032), color-stop(40%, #a805ff), color-stop(50%, #0571ff), color-stop(60%, #d20032), color-stop(70%, #a805ff), color-stop(80%, #0571ff), color-stop(90%, #d20032), to(#a805ff));
+  background: -o-linear-gradient(left, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  background: linear-gradient(to right, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  -webkit-animation: moveRGBline 10s infinite ease-in-out;
+  animation: moveRGBline 10s infinite ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+.body:before {
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  height: 15px;
+  top: -2px; }
+
+
+
+.body__title {
+  font-weight: 600;
+  margin: 0 0 30px;
+  font-size: 26px;
+  padding: 0 25px;
+}
+
+.body .left,
+.body .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.body .right{
+  width: 35%;
+  align-items: flex-end;
+}
+.body .left{
+  width: 65%;
+  align-items: flex-start;
+}
+
+.body .block{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 0 27px;
+}
+.body .items {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 490px;
+}
+
+.body .block:nth-child(odd) {
+  background: rgba(255,255,255,0.04);
+}
+
+.body .items::-webkit-scrollbar{
+  width: 4px;
+}
+.body .items::-webkit-scrollbar-track{
+  background: transparent;
+}
+.body .items::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 200px;
+}
+
+.body .right p{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 7px;
+}
+.body .right .btn{
+    margin: 7px 0 0;
+    border: 2px solid #fff;
+    padding: 5px 12px;
+    font-size: 14.2px;
+    border-radius: 200px;
+    transition: .2s;
+
+}
+.body .right .btn:hover{
+    background: #fff;
+    color: #000;
+}
+.body .left p{
+    text-align: center;
+    font-size: 12pt;
+    margin: 0 0 6px;
+    font-weight: 500;
+}
+.body .left div{
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body .left div span{
+  font-size: 11pt;
+  text-align: center;
+  box-sizing: content-box;
+  width: auto;
+}
+.body i{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 11px;
+}
+.body i:hover{
+    opacity: .6;
+}
+
+.body .exit{
+	float: right;
+	width: 30px;
+	height: 30px;
+    cursor: pointer;
+    background-image: url('../img/exit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+
+.leftarrow {
+  margin-right: 10px;
+}
+.rightarrow {
+  margin-left: 10px;
+}

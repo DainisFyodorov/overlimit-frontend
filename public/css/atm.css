@@ -1,0 +1,149 @@
+.atm{
+    position: absolute;
+    height: 510px;
+    width: 850px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.79);
+    overflow: hidden;
+    border-radius: 11px;
+    font-family: 'Montserrat',sans-serif;
+    box-shadow: 0 3px 30px rgba(0,0,0,0.5);
+}
+
+
+.atm:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: #00c73d;
+  box-shadow: 0 3px 28px rgba(0, 199, 61,0.7);
+ }
+
+.left-info {
+  margin: 0 0 36px;
+}
+
+
+.divtype2 {
+  position: absolute;
+  right: 0;
+  top: 120px;
+}
+
+.left-info__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.left-info__info {
+  font-size: 16px;
+  font-weight: 500;
+  color: #00c73d;
+}
+
+.left-info__last-info {
+  margin: 9px 0 0;
+}
+
+
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block_small {
+  padding: 16px 0 !important;
+  width: 160px !important;
+}
+
+.atm-header__title {
+  position: absolute;
+  left: 38px;
+  top: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.atm .left{
+    position: absolute;
+    left: 38px;
+    top: 142px;
+    height: 220px;
+    width: 250px;
+}
+.atm .right{
+    position: absolute;
+    right: 38px;
+    top: 140px;
+}
+
+.atm .right .right-buttons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 510px;
+  transform-origin: right center;
+  transform: scale(0.97);
+}
+
+.atm .block{
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 23px 0;
+  text-align: center;
+  width: 213px;
+  margin: 0 0 27px 21px;
+  border-radius: 200px;
+  transition: .2s;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.4);
+}
+
+.atm .block:hover {
+  background: #00c73d;
+  border-color: #00c73d;
+  box-shadow: 0 0 45px rgba(0, 199, 61,0.5);
+}
+
+.atm input{
+  position: absolute;
+  top: -65px;
+  right: 4px;
+  width: 92%;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  padding: 9px 10px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.atm input::placeholder {
+  color: #fff;
+  opacity: .4;
+  font-weight: 400 !important;
+}
+
+.atm p.subinfo{
+  position: absolute;
+  right: 0;
+  color: #00c73d;
+  top: -109px;
+  font-weight: 500;
+  font-size: 20px;
+}

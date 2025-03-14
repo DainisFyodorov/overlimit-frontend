@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  user-select: none;
+  backface-visibility: hidden !important;
+ }
+
+*:focus {
+  outline: none; }
+
+[v-cloak] {
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.off-transition {
+  -webkit-transition: 0s !important;
+  -o-transition: 0s !important;
+  transition: 0s !important; }
+
+.clothes_hidden {
+  display: none !important;
+}

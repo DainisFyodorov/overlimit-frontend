@@ -1,0 +1,195 @@
+.characterRotation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;
+}
+
+.menu{
+  position: relative;
+  overflow: hidden;
+    font-family: 'Montserrat',sans-serif;
+    position: absolute;
+    width: 425px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: #fff;
+    padding: 36px 22px;
+    /* display: none; */
+}
+
+.menu1 {
+  display: block !important;
+}
+
+
+.menu:after, .menu:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 800%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff0056), color-stop(10%, #7905ff), color-stop(20%, #0562ff), color-stop(30%, #d20032), color-stop(40%, #a805ff), color-stop(50%, #0571ff), color-stop(60%, #d20032), color-stop(70%, #a805ff), color-stop(80%, #0571ff), color-stop(90%, #d20032), to(#a805ff));
+  background: -o-linear-gradient(left, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  background: linear-gradient(to right, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  -webkit-animation: moveRGBline 10s infinite ease-in-out;
+  animation: moveRGBline 10s infinite ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+.menu:before {
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  height: 11px;
+  top: -2px; }
+
+
+.menu h1{
+  font-weight: 600;
+  font-size: 23px;
+  margin: 0 0 28px;
+}
+.menu .elements{
+    height: 415px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.menu .block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 10px;
+}
+
+
+.menu .block:nth-child(odd) {
+  background: rgba(255,255,255,0.065);
+}
+
+.menu .block:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+.menu .left{
+    width: 60%;
+    font-size: 15px;
+    font-weight: 400;
+}
+.menu .right{
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 7px 14px;
+  border-radius: 200px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: .2s;
+}
+.menu .right:hover{
+    background: #fff;
+    color: #000;
+}
+
+.menu .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin: 25px 0 0;
+    padding: 0 6px;
+}
+.menu .btn{
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid #fff;
+  padding: 11px 0;
+  width: 155px;
+  border-radius: 200px;
+  text-align: center;
+  transition: .2s;
+}
+
+.menu .btn:hover {
+  opacity: .6;
+}
+
+.menu .resign {
+  background: #fff;
+  color: #000;
+}
+
+.menu .btn.big{
+    width: 100%;
+}
+
+.menu .btn.big:hover{
+    opacity: 1;
+    background: #fff;
+    color: #000;
+}
+
+/*
+.menu#shop h1,
+.menu#work h1{
+    background-color: #b63f3f;
+}
+.menu#shop .exit,
+.menu#work .exit{
+    background-color: #b63f3f;
+}
+.menu#shop .exit:hover,
+.menu#work .exit:hover{
+    background-color: #c22222;
+}
+.menu#work .resign{
+    background-color: #2b83b0;
+}
+.menu#work .resign:hover{
+    background-color: #007bbb;
+.menu#fib h1{ background-color: #0e1024; }
+.menu#fib .exit{ background-color: #0e1024; }
+.menu#fib .exit:hover{ background-color: #000644; }
+.menu#fib .right{ background-color: #364455; }
+.menu#fib .right:hover{ background-color: #364455; }
+
+.menu#lspd h1 { background-color: #214984; }
+.menu#lspd .exit{ background-color: #214984; }
+.menu#lspd .exit:hover{ background-color: #214984; }
+
+.menu#army h1{ background-color: #2a2b26; }
+.menu#army .exit{ background-color: #2a2b26; }
+.menu#army .exit:hover{ background-color: #2a2b26; }
+.menu#army .right{ background-color: #524630; }
+.menu#army .right:hover{ background-color: #524630; }
+
+.menu#black h1 { background-color: #121212; }
+.menu#black .exit{ background-color: #121212; }
+.menu#black .exit:hover{ background-color: #121212; }
+
+.menu#gang h1 { background-color: #121212; }
+.menu#gang .exit{ background-color: #121212; }
+.menu#gang .exit:hover{ background-color: #121212; }
+
+.menu#mafia h1 { background-color: #121212; }
+.menu#mafia .exit{ background-color: #121212; }
+.menu#mafia .exit:hover{ background-color: #121212; }
+
+.menu#gov h1 { background-color: #121212; }
+.menu#gov .exit{ background-color: #121212; }
+.menu#gov .exit:hover{ background-color: #121212; }
+
+.menu#sheriff h1{ background-color: #121212; }
+.menu#sheriff .exit{ background-color: #121212; }
+.menu#sheriff .exit:hover{ background-color: #121212; }
+.menu#sheriff .right{ background-color: #15c3cc; }
+.menu#sheriff .right:hover{ background-color: #15c3cc; }

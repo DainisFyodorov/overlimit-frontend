@@ -1,0 +1,379 @@
+.character {
+  position: absolute;
+  left: 25px;
+  top: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 600px;
+  transform-origin: left top;
+}
+
+.editor-pers,
+.properties {
+  position: relative;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 29px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 29px rgba(0, 0, 0, 0.35); }
+  .editor-pers:after, .editor-pers:before,
+  .properties:after,
+  .properties:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px; }
+  .editor-pers:before,
+  .properties:before {
+    height: 11px;
+    -webkit-filter: blur(15px);
+            filter: blur(15px);
+    opacity: .7; }
+
+.editor-pers {
+  position: relative;
+  width: 310px;
+  border-radius: 10px 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff; }
+  .editor-pers__save {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    border: 2px solid #fff;
+    color: #fff;
+    background: none;
+    padding: 10px 30px;
+    border-radius: 200px;
+    font-size: 16px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    .editor-pers__save:hover {
+      background: #fff;
+      color: #000; }
+  .editor-pers:after, .editor-pers:before {
+    background: -webkit-gradient(linear, left top, right top, from(#ff007a), color-stop(80%, #4020ef), to(#00abff));
+    background: -o-linear-gradient(left, #ff007a 0%, #4020ef 80%, #00abff 100%);
+    background: linear-gradient(to right, #ff007a 0%, #4020ef 80%, #00abff 100%); }
+  .editor-pers__title {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 1.4;
+    margin: 45px 0 0 22px; }
+  .editor-pers__list {
+    list-style: none;
+    margin: 50px 0 0; }
+  .editor-pers__item {
+    padding: 20px 22px;
+    cursor: pointer;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s; }
+    .editor-pers__item_active {
+      background: #fff !important;
+      color: #000; }
+    .editor-pers__item i {
+      font-size: 18px;
+      width: 30px; }
+    .editor-pers__item:hover {
+      background: rgba(255, 255, 255, 0.08); }
+      .editor-pers__item:hover:nth-child(odd) {
+        background: rgba(255, 255, 255, 0.08); }
+    .editor-pers__item:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.04); }
+
+.properties {
+  margin: 0 0 0 7px;
+  width: 630px;
+  border-radius: 0 10px 10px 0;
+  padding: 45px 22px 0;
+  color: #fff; }
+  .properties__title {
+    position: relative;
+    top: -2px;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif; }
+  .properties__subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 9px 0;
+    opacity: .8; }
+  .properties:after, .properties:before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(30%, #0085ff), color-stop(#4020ef), to(#ff007a));
+    background: -o-linear-gradient(left, #0085ff 30%, #4020ef, #ff007a);
+    background: linear-gradient(to right, #0085ff 30%, #4020ef, #ff007a); }
+
+.all-properties {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 20px 0 0;
+  padding: 25px 0 0 0;
+  height: 425px; }
+  .all-properties::-webkit-scrollbar {
+    width: 4px; }
+  .all-properties::-webkit-scrollbar-track {
+    background: transparent; }
+  .all-properties::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 200px; }
+  .all-properties__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 0 35px; }
+  .all-properties__title {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 25px 0 0; }
+
+.set-properties__btn {
+  border: 2px solid #fff;
+  font-family: "Open Sans", sans-serif;
+  background: none;
+  color: #fff;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 200px;
+  margin: 0 4px 0 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .set-properties__btn_active {
+    background: #fff;
+    color: #000; }
+  .set-properties__btn:hover:not(.set-properties__btn_active) {
+    opacity: .6; }
+
+.set-properties__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px; }
+  .set-properties__toggle i {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    font-size: 15px; }
+    .set-properties__toggle i:hover {
+      opacity: .6; }
+
+.set-properties__name-toggle {
+  margin: 0 17px; }
+
+
+@media (max-width: 1600px) {
+  .character {
+    height: 522px;
+    top: 9%;
+  }
+  .editor-pers {
+    width: 240px;
+  }
+  .editor-pers__title {
+    font-size: 25px;
+  }
+  .editor-pers__name {
+    font-size: 15px;
+  }
+  .editor-pers__item {
+    padding: 15px 22px;
+  }
+  .editor-pers__item i {
+    font-size: 17px;
+    width: 27px;
+  }
+  .editor-pers__save {
+    font-size: 15px;
+  }
+  .properties__title {
+    font-size: 30px;
+  }
+  .properties__subtitle {
+    font-size: 15px;
+  }
+  .properties {
+    width: 530px;
+  }
+  .all-properties__title {
+    font-size: 17px;
+  }
+  .set-properties__name-toggle {
+    font-size: 16px;
+  }
+  .set-properties__toggle i {
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+  }
+  .set-properties__btn {
+    padding: 6px 13px ;
+  }
+  .slider {
+    width: 165px;
+  }
+  .all-properties {
+    height: 390px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .character {
+    height: 465px;
+    top: 8%;
+  }
+  .editor-pers {
+    width: 215px;
+  }
+  .editor-pers__title {
+    font-size: 22px;
+    margin: 40px 0 0 22px;
+  }
+  .editor-pers__name {
+    font-size: 14px;
+  }
+  .editor-pers__item {
+    padding: 15px 22px;
+  }
+  .editor-pers__item i {
+    font-size: 16px;
+    width: 24px;
+  }
+  .editor-pers__save {
+    font-size: 13px;
+  }
+  .properties__title {
+    font-size: 28px;
+  }
+  .properties__subtitle {
+    font-size: 14px;
+  }
+  .properties {
+    width: 475px;
+    padding: 40px 22px 0;
+  }
+  .all-properties__title {
+    font-size: 15px;
+  }
+  .set-properties__name-toggle {
+    font-size: 15px;
+  }
+  .set-properties__toggle i {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+  .set-properties__btn {
+    padding: 5px 12px ;
+    font-size: 13px;
+  }
+  .slider {
+    width: 155px;
+  }
+  .all-properties {
+    height: 340px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .character {
+    height: 465px;
+    top: 8%;
+  }
+  .editor-pers {
+    width: 205px;
+  }
+  .editor-pers__title {
+    font-size: 21px;
+    margin: 35px 0 0 22px;
+  }
+  .editor-pers__name {
+    font-size: 13px;
+  }
+  .editor-pers__item {
+    padding: 15px 22px;
+  }
+  .editor-pers__item i {
+    font-size: 15px;
+    width: 22px;
+  }
+  .editor-pers__save {
+    font-size: 13px;
+  }
+  .properties__title {
+    font-size: 25px;
+  }
+  .properties__subtitle {
+    font-size: 13px;
+  }
+  .properties {
+    width: 465px;
+    padding: 35px 22px 0;
+  }
+  .all-properties__title {
+    font-size: 15px;
+  }
+  .set-properties__name-toggle {
+    font-size: 15px;
+  }
+  .set-properties__toggle i {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+  .set-properties__btn {
+    padding: 5px 12px ;
+    font-size: 13px;
+  }
+  .slider {
+    width: 155px;
+  }
+  .all-properties {
+    height: 340px;
+  }
+}

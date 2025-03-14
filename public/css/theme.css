@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+.noty_theme__overlimit.noty_bar {
+  margin: 0 0 21px 0;
+  overflow: hidden;
+  border-radius: 7px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.32);
+  z-index: 9999;
+}
+  .noty_theme__overlimit.noty_bar .noty_progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    opacity: 1;
+    overflow: hidden;
+    }
+    .noty_theme__overlimit.noty_bar .noty_progressbar:after {
+      content: '';
+      position: absolute;
+      width: 480px;
+      height: 100%;
+      background: linear-gradient(to right, #ff007a, #4020ef, #00d0ff);
+      left: 0;
+      bottom: 0;
+    }
+  .noty_theme__overlimit.noty_bar .noty_body {
+    padding: 27px 25px;
+    font-size: 12pt; }
+  .noty_theme__overlimit.noty_bar .noty_buttons {
+    padding: 0 10px .5em 10px; }
+
+/*
+.noty_theme__overlimit.noty_type__alert .text i,
+.noty_theme__overlimit.noty_type__notification .text i {
+  color: #fff; }
+
+.noty_theme__overlimit.noty_type__warning .text i {
+  color: #ff6a00; }
+
+.noty_theme__overlimit.noty_type__error .text i {
+  color: #ff2121;
+  text-shadow: 0 1px 25px rgba(255, 33, 33, 0.5);
+ }
+
+.noty_theme__overlimit.noty_type__info .text i,
+.noty_theme__overlimit.noty_type__information .text i {
+  color: #00aaff; }
+
+.noty_theme__overlimit.noty_type__success .text i {
+  color: #80ff00; } */
+
+.text{
+  line-height: 1.7em;
+  font-size: 13pt;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.text i{
+  float: left;
+  font-size: 28pt;
+  margin-right: 30px;
+  width: 40px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 30px rgba(255, 255, 255, 0.4);
+}
+
+
+
+#noty_layout__bottomCenter, #noty_layout__topCenter{
+  width: 480px;
+  z-index: 999;
+}
+#noty_layout__topLeft, #noty_layout__topRight,
+#noty_layout__bottomLeft, #noty_layout__bottomRight,
+#noty_layout__centerLeft, #noty_layout__centerRight,
+#noty_layout__center{
+  width: 450px;
+}

@@ -1,0 +1,220 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+label {
+  font-weight: 500;
+  margin: 0 0 18px;
+  display: block;
+}
+
+output {
+  display: block;
+  margin: 17px 0 0;
+}
+
+.characterRotation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;
+}
+
+.editor {
+  right: 0;
+  top: 0;
+  position: absolute;
+    width: 32vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    color: white;
+    box-shadow: 4px 0 35px rgba(0,0,0,0.8);
+
+    z-index: 2;
+}
+
+.editor h1 {
+    font-weight: 600;
+    margin: 61px 0 43px;
+    font-size: 20pt;
+}
+
+.editor:after, .editor:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 800%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff0056), color-stop(10%, #7905ff), color-stop(20%, #0562ff), color-stop(30%, #d20032), color-stop(40%, #a805ff), color-stop(50%, #0571ff), color-stop(60%, #d20032), color-stop(70%, #a805ff), color-stop(80%, #0571ff), color-stop(90%, #d20032), to(#a805ff));
+  background: -o-linear-gradient(left, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  background: linear-gradient(to right, #ff0056 0, #7905ff 10%, #0562ff 20%, #d20032 30%, #a805ff 40%, #0571ff 50%, #d20032 60%, #a805ff 70%, #0571ff 80%, #d20032 90%, #a805ff 100%);
+  -webkit-animation: moveRGBline 13s infinite ease-in-out;
+  animation: moveRGBline 13s infinite ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+.editor:before {
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  height: 15px;
+  top: -2px; }
+
+
+    .editor h3 {
+        margin: 35px 0 25px;
+        font-size: 20pt;
+        font-weight: 600;
+        color: white;
+    }
+
+    .editor .button {
+      cursor: pointer;
+      font-weight: 500;
+      margin: 40px auto;
+      border: 2px solid #fff;
+      width: 53%;
+      padding: 15px 0;
+      border-radius: 200px;
+      transition: .2s;
+    }
+
+    .editor .button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+
+.element {
+    padding: 8px;
+    color: white;
+}
+
+.slider {
+  width: 200px;
+}
+
+
+.switch{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #fff;
+    margin: 15px auto 0;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 200px;
+    z-index: 1;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+.switch .btn{
+    width: 50%;
+    padding: 11px 0;
+    cursor: pointer;
+    transition: .2s ease-out;
+    font-size: 15px;
+}
+
+.switch__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 200px;
+  transition: .2s ease-out;
+}
+
+.switch__toggle_toggled {
+  left: 50%;
+}
+
+.on {
+  color: #000;
+}
+
+.list {
+    margin: 8px auto 9px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+    .list div {
+      padding: 9px 0;
+      width: 72%;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 7px;
+      color: white;
+      display: inline-block;
+      font-weight: 400;
+    }
+
+    .list .left, .list .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      color: #000;
+      border-radius: 200px;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+        .list input:hover, .list .right:hover, .list .left:hover {
+            opacity: 0.7;
+        }
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+@media (min-width: 1700px) and (max-width: 1920px) {
+  .editor {
+    max-width: 470px;
+  }
+}
+
+@media (min-width: 1365px) and (max-width: 1699px) {
+  .editor {
+    max-width: 405px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1364px) {
+  .editor {
+    max-width: 435px;
+    width: 100%;
+  }
+}
